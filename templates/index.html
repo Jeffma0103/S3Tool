@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Setting</title>
+</head>
+<body>
+    <img class="s3" src="/static/s3.webp">
+    <form class="config" action="/s3page" method="post">
+        <label for="access">Your aws_access_key_id:</label><br>
+        <p><input type="text" name="access" style="width:700px" placeholder="Please input aws_access_key_id"></p><br>
+        <label for="secret">Your aws_secret_access_key:</label><br>
+        <p><input type="text" name="secret" style="width:700px" placeholder="Please input aws_secret_access_key"></p><br>
+        <label for="session">Your aws_session_token:</label><br>
+        <p><input type="text" name="session" style="width:700px" placeholder="Please input aws_session_token"></p><br>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+</body>
+</html>

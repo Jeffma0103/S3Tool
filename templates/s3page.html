@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style_s3page.css">
+    <title>S3page</title>
+</head>
+<body>
+    <img class="s3" src="/static/s3.webp">
+<!--  Get All of Bucket   -->
+    <h1>Bucket list</h1>
+    <form action="/s3page/bucket" method="post" target="_blank">
+        <button type="submit">Get All of Bucket</button>
+    </form><br>
+
+<!--  Get Folder at Bucket  -->
+<!--    <h2>Get Folder</h2>-->
+<!--    <form action="/s3page/folder" method="post" target="_blank">-->
+<!--        <label for="bucket_name">Bucket Name:</label><br>-->
+<!--        <p><input type="text" name="bucket_name" style="width:700px" placeholder="Please input Bucket Name"></p><br>-->
+<!--        <button type="submit">Get All of Bucket</button>-->
+<!--    </form><br>-->
+
+    <h1>Download Metadata</h1>
+    <form action="/s3page/metadata" method="get" >
+        <button type="submit">Download Metadata (STG)</button>
+    </form><br>
+
+    <h1>Download mezzanine</h1>
+    <form action="/s3page/mezzanine" method="get" >
+        <button type="submit">Download mezzanine (STG)</button>
+    </form><br>
+
+
+
+</body>
+</html>
