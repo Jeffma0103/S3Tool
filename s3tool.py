@@ -99,23 +99,23 @@ class S3Helper:
         else:
             return None
 
-    def download_Thumbnail(self, bucket_name, destination_folder):
-        destination_path = "data/thumbnail.png"
-        response = self.client.list_objects_v2(Bucket=bucket_name, Prefix=destination_folder)
+    # def download_Thumbnail(self, bucket_name, destination_folder):
+    #     destination_path = "data/thumbnail.png"
+    #     response = self.client.list_objects_v2(Bucket=bucket_name, Prefix=destination_folder)
+    #
+    #     if 'Contents' in response:
+    #         # 如果存儲桶中有文件，則根據上傳時間對文件進行排序
+    #         files = response['Contents']
+    #         sorted_files = sorted(files, key=lambda x: x['LastModified'], reverse=True)
+    #         # 返回最新文件的名稱
+    #         latest_file_key = sorted_files[0]['Key']
+    #         # print(f"{latest_file_key}.zip")
+    #         self.client.download_file(bucket_name, latest_file_key, destination_path)
+    #     else:
+    #         return None
 
-        if 'Contents' in response:
-            # 如果存儲桶中有文件，則根據上傳時間對文件進行排序
-            files = response['Contents']
-            sorted_files = sorted(files, key=lambda x: x['LastModified'], reverse=True)
-            # 返回最新文件的名稱
-            latest_file_key = sorted_files[0]['Key']
-            # print(f"{latest_file_key}.zip")
-            self.client.download_file(bucket_name, latest_file_key, destination_path)
-        else:
-            return None
 
-
-helper = S3Helper(aws_access_key_id, aws_secret_access_key, aws_session_token)
+# helper = S3Helper(aws_access_key_id, aws_secret_access_key, aws_session_token)
 # print(helper.get_bucket_list())
-helper.download_Thumbnail(bucket_name, folder_name)
+# helper.download_Thumbnail(bucket_name, folder_name)
 
